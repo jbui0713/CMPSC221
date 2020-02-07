@@ -17,19 +17,10 @@ public class Program {
     public static void main(String[] args) {
         Account myAccount = new Account("Baris Manco",500.00);
         Account myAccount2 = new Account("Sezen Aksu",400.00);
-        System.out.printf(myAccount.getName() + "'s Balance: $%,.2f%n",myAccount.getBalance());
-        System.out.printf(myAccount2.getName() + "'s Balance: $%,.2f%n",myAccount2.getBalance());
-        myAccount.withdraw(600.00, 5.00);
-        myAccount2.deposit(600.00);
-        System.out.printf(myAccount.getName() + "'s Balance: $%,.2f%n",myAccount.getBalance());
-        System.out.printf(myAccount2.getName() + "'s Balance: $%,.2f%n",myAccount2.getBalance());
-        System.out.printf("Total fees collected: %n");
+        Teller tdBank = new Teller();
+        tdBank.transfer(myAccount, myAccount2,600);
+        tdBank.transfer(myAccount2, myAccount,50.52);
+        tdBank.transfer(myAccount, myAccount2,50.52);
 
     }
-    public static void transfer(Account from, Account to, double funds, double fee) {
-        //if (funds > )
-        from.withdraw(funds, fee);
-        to.deposit(funds);
-        System.out.printf("Total fees collected: $%,.2f%n",fee);
-    }
-}
+} 

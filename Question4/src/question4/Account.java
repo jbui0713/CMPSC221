@@ -62,7 +62,7 @@ public class Account {
         }
         return balance;
     }
-    public double withdraw(double withdraw, double fee) {
+    public double withdraw(double withdraw) {
         if (withdraw < 1)
         {
             System.out.println("Error! Invalid Withdraw of: $" + withdraw);
@@ -77,6 +77,10 @@ public class Account {
         {
             this.balance = balance - withdraw;
         }
+        return balance;
+    }
+    public double appliedFee( double fee) {
+        this.balance = balance - fee;
         return balance;
     }
 }
