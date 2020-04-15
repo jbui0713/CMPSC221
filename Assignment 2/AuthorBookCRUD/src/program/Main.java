@@ -27,6 +27,7 @@ public class Main { // Class Main created
         Author author; // Creates author object 
         bookDAO = new BookDAO(); // New book instance created 
         Book book; // Creates book object
+        displayMenu(scan);
         /***************
         This is old format for program
         System.out.println("-----------------------------------------------------------------------------------------------");
@@ -129,34 +130,7 @@ public class Main { // Class Main created
                     break;
                     
             }
-        }
-        // Previous code from step 9 commented out for main loop
-//        authorDAO = new AuthorDAO();
-//        printAuthors();
-//        Author author;
-//        bookDAO = new BookDAO();
-//        Book book;
-//        System.out.println("-----------------------------------------------------------");
-//        printBooks();
-//        System.out.println("\n");
-//        
-//        author = new Author (1, "Rick", "Riordan");
-//        authorDAO.insert(author);
-//        addAuthor(2, "J.K.", "Rowling");
-//        addAuthor(3, "J.D.", "Salinger");
-//        
-//        book = new Book (977856325, "The Lightning Thief", 1);
-//        bookDAO.insert(book);
-//        addBook(879999654, "The Sorcecer's Stone", 2);
-//        addBook(978556332, "The Catcher in the Rye", 3);
-//        
-//        updateAuthor(1, "Dick", "Riordan");
-//        updateBook(879999654, "The Chamber of Secrets", 2);
-//        updateBook(978556332, "The Catche in the Rye", 4);
-//        
-//        printAuthors();
-//        System.out.println("-----------------------------------------------------------");
-//        printBooks();
+        }      
         
     }
     
@@ -242,5 +216,30 @@ public class Main { // Class Main created
             System.out.println();
         }
         
+    }
+    static void displayMenu(Scanner scan) {
+        System.out.println("Enter Author(0), Book(1), All Options(2) for table options, or (3) to exit program "); // Prints message for table selection
+        try {
+            table = scan.nextInt(); // Scans user input for table
+        switch (table) { // Tests user input against case option for table given
+            case 0: // Case 0 prints options for Author table
+                System.out.println("Select from Options 1-4\nCreate Author(1) | Return Author(2) | Update Author(3) | Delete Author(4) | Exit Program (9): ");
+                break; // Breaks programs
+            case 1: // Case 1 prints options for Book table options
+                System.out.println("Select from Options 5-8\nCreate Book(5) | Return Book(6) | Update Book(7) | Delete Book(8) | Exit Program (9): ");
+                break;// Breaks program
+            case 2:// Case 2 pints all options for both tables
+                System.out.println("Select from Options 1-4\nCreate Author(1) | Return Author(2) | Update Author(3) | Delete Author(4)"
+                        + "\nOptions 5-8\nCreate Book(5) | Return Book(6) | Update Book(7) | Delete Book(8) | Exit Program (9)");
+                break; // Breaks program
+            default: // Default case exits program
+                System.out.println("Invalid input, try again");
+                //System.exit(0); // Exits the program
+        }
+    } catch (Exception e) {
+        System.out.println("Invalid input, try again");
+        scan.nextLine();
+        displayMenu(scan);
+        }
     }
 }
