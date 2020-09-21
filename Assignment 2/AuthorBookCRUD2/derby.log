@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Mar 06 22:41:38 EST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0170-b315-8a11-00000e9f2fc8 
+on database directory C:\Users\Jefferson\Desktop\AuthorBookCRUD\authorbookdb with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+Loaded from file:/C:/Users/Jefferson/Documents/GitHub/CMPSC221/Assignment%202/AuthorBookCRUD/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_241-b07
+user.dir=C:\Users\Jefferson\Desktop\AuthorBookCRUD
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
