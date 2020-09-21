@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Apr 30 22:14:23 EDT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0171-ce03-6f8c-00000de43c28 
+on database directory C:\Users\Jefferson\Documents\NetBeansProjects\DriverCarCRUDGUI_Test\formuladriftdb with class loader sun.misc.Launcher$AppClassLoader@266474c2 
+Loaded from file:/C:/Program%20Files%20(x86)/glassfish-4.1.1/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_241-b07
+user.dir=C:\Users\Jefferson\Documents\NetBeansProjects\DriverCarCRUDGUI_Test
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
